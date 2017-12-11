@@ -1,10 +1,12 @@
 package com.example.xiaoqweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Tracy on 2017/12/11.
  */
 
-public class City {
+public class City extends DataSupport {
     private int id;
     private String cityName;     //市的名字
     private int cityCode;        //市的代号

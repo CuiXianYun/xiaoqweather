@@ -1,11 +1,13 @@
 package com.example.xiaoqweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Tracy on 2017/12/11.
  */
 
 
-public class Province {
+public class Province extends DataSupport{
     private int id;                  //每个实体类都有的id
     private String provinceName;     //省的id
     private int provinceCode;        //省的名字

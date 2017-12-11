@@ -1,10 +1,12 @@
 package com.example.xiaoqweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Tracy on 2017/12/11.
  */
 
-public class County {
+public class County extends DataSupport {
     private int id;
     private String countyName;     //县的名字
     private String weatherId;      //天气Id
