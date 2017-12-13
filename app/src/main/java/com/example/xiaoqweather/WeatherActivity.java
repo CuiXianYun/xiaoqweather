@@ -1,5 +1,6 @@
 package com.example.xiaoqweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.xiaoqweather.gson.Forecast;
 import com.example.xiaoqweather.gson.Weather;
+import com.example.xiaoqweather.service.AutoUpdateService;
 import com.example.xiaoqweather.util.HttpUtil;
 import com.example.xiaoqweather.util.Utility;
 
@@ -243,5 +245,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
